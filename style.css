@@ -64,6 +64,24 @@
   nav a:hover {
     text-decoration: underline;
   }
+
+  nav ul li a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  nav ul li img {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 2px;
+    vertical-align: middle;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);;
+    border-radius: 4px;
+  }
   
   section h2 {
     margin-bottom: 20px;
@@ -307,6 +325,140 @@
     transform: scale(1.1);
   }
 
+  .productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+ 
+  .productos-grid article {
+    background-color: #fff;
+    border: 2px dashed #55a2eb;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .productos-grid article h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .productos-grid article p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #555;
+  }
+
+  .productos-grid button {
+    background-color: #55a2eb;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+
+  .productos-grid button:hover {
+    background-color: #3c8fd3;
+  }
+
+  .boton-vaciar {
+    background-color: #fc90ab;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    margin: 15px auto;
+    display: block;
+    max-width: 200px;
+    transition: background-color 0.3s ease;
+  }
+
+  .boton-vaciar:hover {
+    background-color: #f83868;
+  }
+
+  .boton-finalizar{
+    background-color: #3c8fd3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    margin: 15px auto;
+    display: block;
+    max-width: 200px;
+    transition: background-color 0.3s ease;
+  }
+
+   .boton-finalizar:hover {
+    background-color: #93c5f3;
+  }
+
+  #contenedor-carrito p {
+    text-align: center;
+    font-style: italic;
+    color: #777;
+    padding: 40px 0;
+    font-size: 1.1rem;
+  }
+
+  #contador-carrito{
+    background-color: #3c8fd3;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 10px;
+  }
+
+  .tienda {
+    margin: 40px auto 20px;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+ .tienda h2 {
+    font-size: 2rem;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .productoCarrito{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+  }
+
+  .img-carrito{
+    width: 130px;
+    height: auto;
+    border-radius: 5px;
+  }
+
+
   
  @media (max-width: 800px) {
   nav ul {
@@ -359,6 +511,15 @@
 
   #bo-top{
     padding: 18px 20px;
+  }
+
+  .productos-grid {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .boton-vaciar {
+    max-width: 100%;
   }
 
 }
