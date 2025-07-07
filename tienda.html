@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tienda y Carrito</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="./IMG/CerdolandF.png" alt="CERDOLAND" width="75%" />
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#tienda">Tienda</a></li>
+        <li><a href="#carrito"><img src="./IMG/cart-shopping-solid.svg" alt="carrito" width="25px"> <span id="contador-carrito">(0)</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="tienda" class="tienda">
+      <h2>Tienda</h2>
+    </section>
+
+    <section id="contenedor-productos" class="productos-grid"></section>
+
+    <section id="carrito" class="tienda">
+      <h2>Carrito</h2>
+    </section>
+    <button id="vaciar-carrito" class="boton-vaciar">Vaciar carrito</button>
+    <button id="finalizar-compra" class="boton-finalizar">Finalizar compra</button>
+    <section id="contenedor-carrito" class="productos-grid"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
