@@ -1,27 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Carrito desde localStorage
   let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-  // Elementos del DOM
   const contenedorProductos = document.getElementById("contenedor-productos");
   const contenedorCarrito = document.getElementById("contenedor-carrito");
   const contadorCarrito = document.getElementById("contador-carrito");
   const btnVaciar = document.getElementById("vaciar-carrito");
   const btnFinalizar = document.getElementById("finalizar-compra");
 
-  // Función para actualizar el contador visual del carrito
   const actualizarContador = () => {
     if (contadorCarrito) {
       contadorCarrito.textContent = `(${carrito.length})`;
     }
   };
 
-  // Función para guardar el carrito en localStorage
   const guardarCarrito = () => {
     localStorage.setItem("carrito", JSON.stringify(carrito));
   };
 
-  // Renderiza los productos en la tienda
   const renderProductos = () => {
     if (!contenedorProductos) return;
 
@@ -62,7 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch(err => console.error("ERROR:", err));
   };
 
-  // Renderiza el carrito de compras
   const renderCarrito = () => {
     if (!contenedorCarrito) return;
 
@@ -104,7 +98,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  // Vaciar carrito
   if (btnVaciar) {
     btnVaciar.addEventListener("click", () => {
       if (carrito.length === 0) return;
@@ -118,7 +111,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Finalizar compra
   if (btnFinalizar) {
     btnFinalizar.addEventListener("click", () => {
       if (carrito.length === 0) return;
@@ -128,12 +120,11 @@ document.addEventListener("DOMContentLoaded", () => {
         carrito = [];
         renderCarrito();
         actualizarContador();
-        window.location.href = "index.html"; // o podés redirigir donde quieras
+        window.location.href = "index.html"; 
       }
     });
   }
 
-  // Inicialización
   renderProductos();
   renderCarrito();
   actualizarContador();
